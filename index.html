@@ -28,28 +28,32 @@
             background: rgba(253, 253, 253, 0.95); backdrop-filter: blur(15px);
             z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.08);
         }
+
         .logo { font-weight: 900; font-size: 1.5rem; color: var(--primary); letter-spacing: -1px; text-transform: uppercase; }
         .nav-links { display: flex; gap: 30px; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
 
-        /* MENU DROP DOWN BAIXAR - AJUSTADO PARA CLIQUE */
+        /* MENU DROP DOWN */
         .dropdown { position: relative; display: inline-block; }
         .btn-download {
             background: var(--primary); color: white; padding: 10px 25px;
             border-radius: 30px; font-size: 0.85rem; font-weight: 700; cursor: pointer;
             box-shadow: 0 4px 10px rgba(227, 27, 35, 0.15); border: none; outline: none;
         }
+
         .dropdown-content {
             display: none; position: absolute; right: 0; background-color: #fff;
             min-width: 180px; box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
             border-radius: 15px; z-index: 1001; overflow: hidden; margin-top: 10px;
             border: 1px solid rgba(0,0,0,0.05);
         }
+
         .dropdown-content.show { display: block; animation: fadeIn 0.3s ease; }
         .dropdown-content a {
             color: var(--text-dark); padding: 15px 20px; text-decoration: none;
             display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 600; transition: 0.2s;
         }
+
         .dropdown-content a:hover { background-color: #fff5f5; color: var(--primary); }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -59,6 +63,7 @@
             padding: 140px 8% 80px; gap: 50px;
             background: radial-gradient(circle at 80% 20%, #fff5f5 0%, #ffffff 100%);
         }
+
         .hero-text { flex: 1.1; }
         .hero-text h1 { font-size: clamp(2.3rem, 4.5vw, 3.8rem); font-weight: 900; line-height: 1.15; margin-bottom: 35px; color: #000; letter-spacing: -2px; }
         .hero-text span { color: var(--primary); }
@@ -72,6 +77,7 @@
             transition: var(--transition); font-weight: 700; font-size: 0.95rem;
             box-shadow: 0 8px 20px rgba(227, 27, 35, 0.2);
         }
+
         .btn-store:hover { background: var(--primary-hover); transform: translateY(-5px); box-shadow: 0 12px 25px rgba(227, 27, 35, 0.35); }
 
         .hero-visual { flex: 0.9; position: relative; }
@@ -80,8 +86,8 @@
             box-shadow: 0 20px 45px rgba(0,0,0,0.08); border: 10px solid #fff;
             transform: rotate(2deg); transition: var(--transition);
         }
-        .main-photo img { width: 100%; display: block; object-fit: cover; }
 
+        .main-photo img { width: 100%; display: block; object-fit: cover; }
         .floating-phone {
             position: absolute; width: 190px; bottom: -70px; left: -50px;
             filter: drop-shadow(0 25px 45px rgba(0,0,0,0.35));
@@ -102,6 +108,7 @@
             padding: 130px 8%; background: var(--primary); color: #fff;
             border-radius: 70px 70px 0 0; display: flex; align-items: center; gap: 70px;
         }
+
         .driver-text { flex: 1; }
         .driver-text h2 { font-size: 3.2rem; font-weight: 900; margin-bottom: 40px; letter-spacing: -2px; line-height: 1.1; }
         .driver-text p { font-size: 1.3rem; margin-bottom: 50px; line-height: 1.7; opacity: 0.95; font-weight: 500; }
@@ -114,7 +121,13 @@
         footer { padding: 90px 8%; background: var(--bg-dark); color: var(--text-light); text-align: center; border-radius: 70px 70px 0 0; }
         .f-logo { font-weight: 900; color: var(--primary); font-size: 2.6rem; margin-bottom: 25px; display: block; }
 
+        /* AJUSTE MOBILE PARA EVITAR ATROPELO */
         @media (max-width: 1000px) {
+            nav { padding: 15px 5%; }
+            .logo { font-size: 1.1rem; }
+            .nav-links { gap: 15px; }
+            .nav-links a { font-size: 0.75rem; }
+            .btn-download { padding: 8px 15px; font-size: 0.75rem; }
             header, .driver-section { flex-direction: column; text-align: center; padding: 120px 8%; }
             .btn-group { justify-content: center; }
             .hero-text p, .driver-text p { margin-left: auto; margin-right: auto; }
@@ -127,7 +140,7 @@
     <nav>
         <div class="logo">MINEIRINHO CAR</div>
         <div class="nav-links">
-            <a href="#sejamotorista" style="color: var(--primary);">Seja um Motorista</a>
+            <a href="#sejamotorista" style="color: var(--primary);">Motorista</a>
             <div class="dropdown">
                 <button class="btn-download" onclick="toggleMenu()">BAIXAR APP <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></button>
                 <div class="dropdown-content" id="myDropdown">
@@ -137,7 +150,6 @@
             </div>
         </div>
     </nav>
-
     <header>
         <div class="hero-text">
             <h1>MAIS QUE UMA VIAGEM,<br>UM <span>CUIDADO REAL.</span></h1>
@@ -154,7 +166,6 @@
             <img src="celular.png" alt="App Preview" class="floating-phone" onerror="this.src='https://via.placeholder.com/180x380/000/fff?text=celular.png'">
         </div>
     </header>
-
     <section class="manifesto">
         <h2>CONSTRUINDO UM NOVO CAMINHO</h2>
         <div class="manifesto-grid">
@@ -163,7 +174,6 @@
             <div class="m-card"><i class="fas fa-users"></i><h3>Feito por Pessoas</h3><p>Chega de respostas automáticas. Valorizamos o contato humano e a solução imediata para você.</p></div>
         </div>
     </section>
-
     <section class="driver-section" id="sejamotorista">
         <div class="driver-text">
             <h2>VENHA DIRIGIR COM PROPÓSITO.</h2>
@@ -174,12 +184,10 @@
             <img src="motorista_trabalho.png" alt="Motorista em Trabalho" onerror="this.src='https://via.placeholder.com/500x600/FDFDFD/E31B23?text=Sua+Foto+Motorista+Aqui'">
         </div>
     </section>
-
     <footer>
         <span class="f-logo">MINEIRINHO CAR</span>
         <p style="font-size: 1.1rem; opacity: 0.8;">&copy; 2026 - Orgulho em cuidar da nossa gente.</p>
     </footer>
-
     <script>
         function toggleMenu() { document.getElementById("myDropdown").classList.toggle("show"); }
         window.onclick = function(event) { if (!event.target.matches('.btn-download')) { var dropdowns = document.getElementsByClassName("dropdown-content"); for (var i = 0; i < dropdowns.length; i++) { var openDropdown = dropdowns[i]; if (openDropdown.classList.contains('show')) { openDropdown.classList.remove('show'); } } } }
