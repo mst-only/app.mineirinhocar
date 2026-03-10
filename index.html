@@ -43,10 +43,9 @@
         .hero-text span { color: var(--primary); }
         .hero-text p { font-size: 1.25rem; color: #444; margin-bottom: 55px; max-width: 580px; line-height: 1.7; }
 
-        /* AJUSTE DOS BOTÕES - AGORA VERMELHOS POR PADRÃO */
         .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
         .btn-store {
-            background: var(--primary); /* Mudança para vermelho oficial */
+            background: var(--primary); 
             color: #fff; 
             padding: 14px 28px;
             min-width: 190px;
@@ -54,7 +53,7 @@
             border-radius: 45px;
             text-decoration: none; display: flex; align-items: center; gap: 12px;
             transition: var(--transition); font-weight: 700; font-size: 0.95rem;
-            box-shadow: 0 8px 20px rgba(227, 27, 35, 0.2); /* Sombra suave vermelha */
+            box-shadow: 0 8px 20px rgba(227, 27, 35, 0.2);
         }
         .btn-store:hover { 
             background: var(--primary-hover); 
@@ -62,7 +61,6 @@
             box-shadow: 0 12px 25px rgba(227, 27, 35, 0.35); 
         }
 
-        /* Botão da Nav em destaque */
         .nav-links .btn-download {
             background: var(--primary);
             color: white;
@@ -78,7 +76,6 @@
             box-shadow: 0 20px 45px rgba(0,0,0,0.08); border: 10px solid #fff;
             transform: rotate(2deg); transition: var(--transition);
         }
-        .main-photo:hover { transform: rotate(0deg) scale(1.03); }
         .main-photo img { width: 100%; display: block; object-fit: cover; }
 
         .floating-phone {
@@ -92,7 +89,6 @@
         .manifesto h2 { font-size: 2.6rem; font-weight: 800; margin-bottom: 25px; letter-spacing: -1px; }
         .manifesto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 45px; margin-top: 70px; }
         .m-card { background: #fff; padding: 55px 40px; border-radius: 30px; border: 1px solid #eee; text-align: left; transition: var(--transition); }
-        .m-card:hover { border-color: var(--primary); transform: translateY(-12px); background: #fffdfd; box-shadow: 0 15px 40px rgba(227,27,35,0.05); }
         .m-card i { font-size: 2.8rem; color: var(--primary); margin-bottom: 30px; display: block; }
         .m-card h3 { margin-bottom: 18px; font-size: 1.6rem; font-weight: 800; }
         .m-card p { line-height: 1.8; color: #555; font-size: 1.1rem; }
@@ -100,20 +96,18 @@
         /* SEJA UM MOTORISTA */
         .driver-section {
             padding: 130px 8%; background: var(--primary); color: #fff;
-            border-radius: 70px 70px 0 0; display: flex; align-items: center; gap: 70px;
+            border-radius: 70px 70px 0 0; display: flex; align-items: center; gap: 60px;
         }
         .driver-text { flex: 1; }
         .driver-text h2 { font-size: 3.2rem; font-weight: 900; margin-bottom: 40px; letter-spacing: -2px; line-height: 1.1; }
         .driver-text p { font-size: 1.3rem; margin-bottom: 50px; line-height: 1.7; opacity: 0.95; font-weight: 500; }
         
-        /* Botão branco na seção vermelha */
         .btn-driver {
             background: #fff; color: var(--primary); 
             padding: 18px 35px; border-radius: 45px;
             text-decoration: none; font-weight: 800; font-size: 1.1rem;
             transition: var(--transition); display: inline-block;
         }
-        .btn-driver:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
 
         .driver-visual { flex: 1; display: flex; justify-content: center; }
         .driver-visual img {
@@ -141,7 +135,7 @@
         <div class="logo">MINEIRINHO CAR</div>
         <div class="nav-links">
             <a href="#sejamotorista" style="color: var(--primary);">Seja um Motorista</a>
-            <a href="#baixar" class="btn-download">BAIXAR APP</a>
+            <a href="#download-section" class="btn-download">BAIXAR APP</a>
         </div>
     </nav>
 
@@ -149,9 +143,9 @@
         <div class="hero-text">
             <h1>MAIS QUE UMA VIAGEM,<br>UM <span>CUIDADO REAL.</span></h1>
             <p>O aplicativo feito para a nossa gente. Criamos um caminho onde o respeito por idosos, PCD e a comunidade LGBT+ é a nossa prioridade absoluta, garantindo que você chegue ao seu destino com a dignidade que merece.</p>
-            <div class="btn-group" id="baixar">
-                <a href="#" class="btn-store"><i class="fab fa-apple"></i> App Store</a>
-                <a href="#" class="btn-store"><i class="fab fa-google-play"></i> Play Store</a>
+            <div class="btn-group" id="download-section">
+                <a href="https://apps.apple.com/br/app/mineirinho-car/id6753950558" target="_blank" class="btn-store"><i class="fab fa-apple"></i> App Store</a>
+                <a href="https://play.google.com/store/search?q=mineirinho%20car&c=apps&hl=pt_BR" target="_blank" class="btn-store"><i class="fab fa-google-play"></i> Play Store</a>
             </div>
         </div>
         <div class="hero-visual">
