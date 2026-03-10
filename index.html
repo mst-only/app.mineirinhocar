@@ -9,10 +9,10 @@
     <style>
         :root {
             --primary: #E31B23;
+            --primary-hover: #C2161C;
             --bg-light: #FDFDFD;
             --bg-card: #FFFFFF;
             --bg-dark: #121212;
-            --btn-black: #1A1A1A; /* Grafite profundo para não sumir no fundo */
             --text-dark: #1A1A1A;
             --text-light: #F4F4F4;
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -43,19 +43,34 @@
         .hero-text span { color: var(--primary); }
         .hero-text p { font-size: 1.25rem; color: #444; margin-bottom: 55px; max-width: 580px; line-height: 1.7; }
 
-        /* BOTÕES AJUSTADOS */
+        /* AJUSTE DOS BOTÕES - AGORA VERMELHOS POR PADRÃO */
         .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
         .btn-store {
-            background: var(--btn-black); color: #fff; 
+            background: var(--primary); /* Mudança para vermelho oficial */
+            color: #fff; 
             padding: 14px 28px;
             min-width: 190px;
             justify-content: center;
             border-radius: 45px;
             text-decoration: none; display: flex; align-items: center; gap: 12px;
             transition: var(--transition); font-weight: 700; font-size: 0.95rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Sombra para destaque */
+            box-shadow: 0 8px 20px rgba(227, 27, 35, 0.2); /* Sombra suave vermelha */
         }
-        .btn-store:hover { background: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(227, 27, 35, 0.25); }
+        .btn-store:hover { 
+            background: var(--primary-hover); 
+            transform: translateY(-5px); 
+            box-shadow: 0 12px 25px rgba(227, 27, 35, 0.35); 
+        }
+
+        /* Botão da Nav em destaque */
+        .nav-links .btn-download {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(227, 27, 35, 0.15);
+        }
 
         .hero-visual { flex: 0.9; position: relative; }
         .main-photo {
@@ -91,6 +106,15 @@
         .driver-text h2 { font-size: 3.2rem; font-weight: 900; margin-bottom: 40px; letter-spacing: -2px; line-height: 1.1; }
         .driver-text p { font-size: 1.3rem; margin-bottom: 50px; line-height: 1.7; opacity: 0.95; font-weight: 500; }
         
+        /* Botão branco na seção vermelha */
+        .btn-driver {
+            background: #fff; color: var(--primary); 
+            padding: 18px 35px; border-radius: 45px;
+            text-decoration: none; font-weight: 800; font-size: 1.1rem;
+            transition: var(--transition); display: inline-block;
+        }
+        .btn-driver:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+
         .driver-visual { flex: 1; display: flex; justify-content: center; }
         .driver-visual img {
             width: 100%; max-width: 520px; border-radius: 40px;
@@ -117,7 +141,7 @@
         <div class="logo">MINEIRINHO CAR</div>
         <div class="nav-links">
             <a href="#sejamotorista" style="color: var(--primary);">Seja um Motorista</a>
-            <a href="#baixar" class="btn-store" style="padding: 12px 22px; min-width: auto; font-size: 0.85rem; box-shadow: none;">BAIXAR APP</a>
+            <a href="#baixar" class="btn-download">BAIXAR APP</a>
         </div>
     </nav>
 
@@ -151,7 +175,7 @@
         <div class="driver-text">
             <h2>VENHA DIRIGIR COM PROPÓSITO.</h2>
             <p>Faça parte da revolução no transporte da nossa região. Oferecemos taxas transparentes e o respeito que o motorista parceiro merece de verdade.</p>
-            <a href="#" class="btn-store" style="background: #fff; color: var(--primary); max-width: 280px; font-size: 1rem;">QUERO SER PARCEIRO</a>
+            <a href="#" class="btn-driver">QUERO SER PARCEIRO</a>
         </div>
         <div class="driver-visual">
             <img src="motorista_trabalho.png" alt="Motorista em Trabalho" onerror="this.src='https://via.placeholder.com/500x600/FDFDFD/E31B23?text=Sua+Foto+Motorista+Aqui'">
